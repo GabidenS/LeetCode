@@ -34,10 +34,12 @@ func countElements(arr []int) int {
 		fmt.Println(m[k], k)
 		v, ok := m[k]
 		_, ok1 := m[k+1]
+		m[k] = delete.m[k]
 		if ok && ok1 {
 			res++
 			res += v - 1
 		}
 	}
+
 	return res
 }
